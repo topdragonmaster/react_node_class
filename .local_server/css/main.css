@@ -1,0 +1,82 @@
+/** This is the main stylesheet for the sass compiler, all imports should stem from this initial page. It contains the universal styles of the site, the imports and various other items. */
+/** The menu is technically the header of the site, it contains the styles for the drop down of the Search Bar. */
+header.menu { width: 100%; position: relative; z-index: 10; }
+
+header.menu div.menu-container { width: 100%; background-color: #040a2b; padding: 0 20px; text-align: left; }
+
+header.menu div.menu-container div.menu-holder { position: relative; width: 100%; max-width: 1280px; margin: 0 auto; }
+
+header.menu div.menu-container h1 { font-family: Arial, Helvetica, sans-serif; font-size: 24px; line-height: 70px; color: white; text-align: left; display: inline-block; }
+
+header.menu div.menu-container nav { display: inline-block; margin-left: 60px; }
+
+header.menu div.menu-container nav i { color: white; font-size: 30px; line-height: 70px; }
+
+header.menu div.menu-container nav i.search { position: absolute; right: 10px; top: 0; }
+
+header.menu div.menu-container nav a.nav-item { font-family: Helvetica, Arial, Sans-Serif; font-size: 17px; line-height: 70px; text-transform: uppercase; text-decoration: none; white-space: nowrap; border-bottom: 1px solid transparent; color: #FFF; margin-right: 20px; }
+
+header.menu div.search-container { position: absolute; background-color: white; z-index: 20; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%; padding: 5px; background-color: white; border-bottom: 1px solid #CCC; display: none; }
+
+header.menu div.search-container.showing { display: block; }
+
+header.menu div.search-container input[type='text'] { min-width: 100%; font-size: 36px; line-height: 50px; border: 1px solid #CCC; padding: 0 10px; }
+
+header.menu div.search-container i.close { position: absolute; right: 10px; top: 5px; font-size: 36px; line-height: 50px; }
+
+/** This is the central home page */
+section#home { position: absolute; width: 100%; height: 100%; top: 0; left: 0; padding: 100px 20px 0; background-image: url("/img/header.jpg"); background-size: cover; background-repeat: no-repeat; }
+
+section#home h1.title { color: white; font-size: 30px; margin-top: 80px; text-align: center; margin-bottom: 40px; }
+
+section#home div.content { margin: 0px 50px; }
+
+section#home div.SliderContainer { display: -webkit-box; display: -ms-flexbox; display: flex; color: #FFF; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+section#home .SliderContainer .HeaderContent { display: -webkit-box; display: -ms-flexbox; display: flex; color: #FFF; padding: 0px; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; margin-bottom: 10px; }
+
+section#home .SliderContainer .HeaderContent .ResultText { font-size: 25px; margin-right: 20px; }
+
+section#home .ArrowButtom { position: relative; background-color: #0b7dda; border: none; font-size: 20px; color: #FFFFFF; padding: 6px; width: 110px; text-align: center; -webkit-transition-duration: 0.4s; transition-duration: 0.4s; text-decoration: none; overflow: hidden; cursor: pointer; margin-right: 20px; }
+
+section#home .ArrowButtom:after { content: ""; background: #2196F3; display: block; position: absolute; padding-top: 300%; padding-left: 350%; margin-left: -20px !important; margin-top: -120%; opacity: 0; -webkit-transition: all 0.8s; transition: all 0.8s; }
+
+section#home .ArrowButtom:disabled { opacity: 0.4; }
+
+section#home .ArrowButtom:active:after { padding: 0; margin: 0; opacity: 1; -webkit-transition: 0s; transition: 0s; }
+
+section#home .SliderContainer .SliderContent { display: -webkit-box; display: -ms-flexbox; display: flex; color: #FFF; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; overflow-x: scroll; overflow: hidden; scroll-behavior: smooth; margin-top: 20px; background: black; padding: 10px 0px; }
+
+section#home div.ProductContainer { position: relative; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 25%; -ms-flex-negative: 0; flex-shrink: 0; padding: 100px 20px 0px 20px; text-align: center; }
+
+section#home .ProductContainer .Name { position: absolute; top: 0px; color: white; font-size: 25px; text-align: center; margin-bottom: 10px; }
+
+section#home .ImgContainer { position: relative; height: 300px; }
+
+section#home .Picture { display: block; height: 100%; margin: auto; }
+
+section#home .Overlay { position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(11, 125, 218, 0.8); overflow: hidden; width: 100%; height: 0%; -webkit-transition: .5s ease; transition: .5s ease; -webkit-transition-timing-function: cubic-bezier(0.1, 3, 1, 0.1); transition-timing-function: cubic-bezier(0.1, 3, 1, 0.1); }
+
+section#home .ImgContainer:hover .Overlay { height: 100%; }
+
+section#home .Text { color: white; font-size: 20px; position: absolute; top: 50%; left: 50%; height: 100%; width: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; padding: 20px; }
+
+section#home .ProductContainer .Price { color: white; font-size: 28px; margin-top: 10px; }
+
+html, html * { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; }
+
+html, body { width: 100%; height: 100%; }
+
+main { width: 100%; height: 100%; display: block; position: relative; }
+
+main * { -webkit-font-smoothing: antialiased; }
+
+main a { -webkit-transition: opacity .5s; transition: opacity .5s; }
+
+main a:hover { opacity: 0.7; }
+
+main a:visited { color: inherit; }
+
+main div.inner { width: 100%; height: auto; background-color: #960000; }
+
+/*# sourceMappingURL=main.css.map */
