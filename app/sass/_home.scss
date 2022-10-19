@@ -1,0 +1,95 @@
+/**
+ * This is the central home page
+ *
+ */
+.home {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0; left: 0;
+    padding: 150px 20px 50px;
+    background-image: url('/img/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include md("sm") {
+        padding: 150px 0px 50px;
+    }
+    .container {
+        max-width: 1400px;
+        margin: auto;
+        padding: 0 15px;
+        
+    }
+    .product {
+        background: rgba(255,255,255,0.9);
+        position: relative;
+        overflow: hidden;
+        padding: 50px 15px 25px;
+        text-align: center;
+        width: 95%;
+        margin: auto;
+        cursor: pointer;
+        user-select: none;
+        transition: all ease-in-out 0.3s;
+        &:hover {
+            background: rgba(255,255,255,1);
+            transition: all ease-in-out 0.3s;
+        }
+        &-badge {
+            position: absolute;
+            font-family: monospace;
+            right: 10px;
+            background: green;
+            color: white;
+            top: 10px;
+            border-radius: 15px;
+            padding: 5px 10px;
+            &.out {
+                background-color: #dc3545;
+            }
+        }
+        &-img {
+            max-width: 100%;
+            pointer-events: none;
+        }
+        &-name {
+            position: relative;
+            padding-bottom: 150px;
+            &__content {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                max-width: 150px;
+                left: 50%;
+                top: 50%;
+                margin: auto;
+                font-family: fantasy;
+            }
+        }
+        &-price {
+            font-size: 20px;
+            font-family: monospace;
+            margin-bottom: 30px;
+        }
+        &-btn {
+            border: 0!important;
+            width: auto;
+            padding: 0 20px;
+            border-radius: 45px;
+            height: 45px;
+            font-size: 12px;
+            line-height: 45px;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            background: black;
+            color: white;
+            cursor: pointer;
+        }
+        &-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.1;
+        }
+    }
+    .react-multiple-carousel__arrow {
+        z-index: 1;
+    }
+}

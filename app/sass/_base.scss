@@ -1,0 +1,74 @@
+html, html * {
+  box-sizing: border-box; padding: 0; margin: 0;
+}
+
+// These are used to ensure the app runs full display
+html, body {
+  width: 100%; height: 100%;
+}
+//variable
+$siteWidth: 1280px;
+
+//mixin
+$media: (
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+    2xl: 1536px,
+    3xl: 1920px,
+);
+
+@mixin md($breakpoint) {
+    @each $breakpoints, $size in $media {
+        @if $breakpoint==$breakpoints {
+            @media screen and (max-width: $size) {
+                @content;
+            }
+        }
+    }
+}
+
+// Main body content
+main {
+
+  // The main body of the page
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+
+  * {
+      -webkit-font-smoothing: antialiased;
+  }
+  
+  // The links for the app all have these main attributes
+  a {
+      transition: opacity .5s;
+
+      &:hover {
+          opacity: 0.7;
+      }
+  }
+
+  // Inner Divs are used for general full width containers
+  .inner { 
+    width: 100%;
+    height: auto;
+    background-color: rgb(150, 0, 0);
+  }
+
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #b76730;
+  outline: 1px solid #b76730;
+}
